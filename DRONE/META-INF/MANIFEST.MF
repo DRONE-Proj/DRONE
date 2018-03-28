@@ -1,0 +1,23 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: DocInconsistencyFrame
+Bundle-SymbolicName: DocInconsistencyFrame;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: docinconsistencyframe.Activator
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.core.resources;bundle-version="3.9.1",
+ org.eclipse.jdt.core;bundle-version="3.10.2",
+ org.eclipse.jdt.ui;bundle-version="3.10.2"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-ActivationPolicy: lazy
+Export-Package: docinconsistencyframe,
+ docinconsistencyframe.element,
+ docinconsistencyframe.views,
+ udf.ApiOmiDetec.CallGraph.fromJDT,
+ udf.ApiOmiDetec.CallGraph.fromJDT.getSignature,
+ udf.ApiOmiDetec.CallGraph.fromJDT.testPackage
+Import-Package: org.eclipse.jface.text,
+ org.eclipse.jface.text.source,
+ org.eclipse.ui.ide
+

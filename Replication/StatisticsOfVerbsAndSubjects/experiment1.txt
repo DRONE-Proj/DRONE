@@ -1,0 +1,4 @@
+The number of sentences with subject:8156
+The number of sentences with verb:15179
+
+Most common verbs(Top 20):[('be', 8213), ('paint', 1881), ('specify', 1377), ('use', 1089), ('contain', 466), ('offset', 422), ('return', 422), ('set', 392), ('coordinate', 363), ('identify', 340), ('have', 325), ('display', 318), ('add', 301), ('remove', 275), ('render', 269), ('do', 238), ('give', 237), ('transform', 236), ('start', 232), ('create', 204)]

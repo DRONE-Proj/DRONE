@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.views">
+      <category 
+      name="Sample Category" 
+      id="DocInconsistencyFrame" /> 
+  <view name="DRONE-Detect View" icon="icons/sample.gif" category="DocInconsistencyFrame" class="docinconsistencyframe.views.DocInconsistencyView" id="docinconsistencyframe.views.DocInconsistencyView" /> 
+  <view 
+  category="DocInconsistencyFrame" 
+  class="docinconsistencyframe.views.AlterBugsView" 
+  icon="icons/sample.gif" 
+  id="docinconsistencyframe.views.AlterBugsView" 
+  name="DRONE-Repair View" /> 
+  
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension
+            targetID="org.eclipse.jdt.ui.JavaPerspective">
+         <view
+               ratio="0.5"
+               relative="org.eclipse.ui.views.ProblemView"
+               relationship="right"
+               id="docinconsistencyframe.views.DocInconsistencyView">
+         </view>
+      </perspectiveExtension>
+   </extension>
+   <extension
+         point="org.eclipse.help.contexts">
+      <contexts
+            file="contexts.xml">
+      </contexts>
+   </extension>
+  <extension
+         point="org.eclipse.ui.popupMenus">
+       
+        <objectContribution
+
+        adaptable="true"
+
+        id="com.free.menu.popupMenu"
+
+        objectClass="org.eclipse.core.resources.IProject">
+
+
+     <action
+
+           label="DRONE"
+           class="docinconsistencyframe.element.ContextMenuAction"
+
+           menubarPath="com.free.menu.popupSubMenu"
+
+           enablesFor="1"
+
+           id="docinconsistencyframe.element.NewAction">
+
+     </action>
+ </objectContribution>
+
+   </extension>
+</plugin>
