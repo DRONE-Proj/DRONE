@@ -1,4 +1,0 @@
-The number of sentences with subject:3970
-The number of sentences with verb:6915
-
-Most common verbs(Top 20):[('be', 4418), ('use', 716), ('return', 310), ('have', 289), ('call', 275), ('set', 236), ('draw', 166), ('add', 161), ('create', 149), ('specify', 144), ('write', 139), ('receive', 135), ('contain', 132), ('send', 130), ('apply', 114), ('do', 106), ('start', 105), ('support', 103), ('offset', 103), ('remove', 101)]
