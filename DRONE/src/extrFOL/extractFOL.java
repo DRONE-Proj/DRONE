@@ -34,7 +34,7 @@ public class extractFOL {
 			
             String encoding="GBK";
             File file=new File(CallGraphGlobalSettings.ResultSavePath);
-//            File file=new File("F:\\文档\\资料\\jdk_part\\CellDocViaInvokations\\checkLog.csv");
+         //  File file=new File("C:\\Users\\Administrator\\Desktop\\joda\\CellDocViaInvokations\\checkLog.csv");
             
             if(file.isFile() && file.exists()){ //判断文件是否存在
                 InputStreamReader read = new InputStreamReader(
@@ -119,28 +119,32 @@ public class extractFOL {
 				for(i=0;i<rowNum;i++){
 					
 					String content=AllInfo.get(i);
+				
 					String str="";
 					String []elements=content.split(",");
 					String []elementsChanged=new String[10] ;
+				//	System.out.println(i);
 					int k=0;
 					for(int num=0;num<elements.length;num++){
 						if(num==1||num==2||(num>=9&&num!=13))
 							elementsChanged[k++]=elements[num];
 					}
-					if(elements[5]=="1")
+					if(elements[5].equals("1"))
 						elementsChanged[k++]="Consistent";
 					else
 						elementsChanged[k++]="Inconsistent";
-					String check=elementsChanged[2];
-//					if(!check.equals("1")){
+					String check=elementsChanged[k-1];
+		//			System.out.println(check);
+					if(!check.equals("Consistent")){
 						FolInfo s=alterBugsInfo.get(index);
+				
 						index++;
 						str=s.getNLPs_doc();
 //						if(str.contains("\n")){
 //							String []arg=str.split("\n");
 //							for(int j=0;j<arg.length;j++)
 //								str+=arg[j]+"     ";
-//						}
+						}
 						Label la=new Label(colNum-1,i+1,str);
 						ws.addCell(la);
 //					}

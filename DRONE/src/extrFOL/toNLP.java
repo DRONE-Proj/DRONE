@@ -27,7 +27,8 @@ public class toNLP {
 			this.ckeck = folI.getCkeck();
 			this.returnType = folI.getReturnType();
 			this.AllInfo = folI.getAllInfo();
-//			if(this.ckeck.equals("1")) continue;
+		//	System.out.println(this.ckeck);
+			if(this.ckeck.equals("1")) continue;
 			if(this.exception.contains("SOLOIF")||this.exception.contains("FIRSTRETURN")){
 				this.NLPs_doc = getNLPs_doc2(this.FOLs_doc).trim();
 				if(this.NLPs_doc.equals(""))

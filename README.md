@@ -24,6 +24,7 @@ We summarize more than 60 heuristics on the typical descriptions of API usage co
 * step 2. The two files ***libz3.dll*** and ***libz3java.dll*** need to be put under the specified folder:
 ***C:/Windows/System32/*** ;
 * step 3. Please make sure that ***vcredist_x64.exe*** has been installed (Our tool uses the SMT solver ***Z3***, so step 2 and 3 need to be executed.);
+* Note that the version of the JDK we use in our current implementation is ***Java SE Development Kit 8u144*** and the verison of ***eclipse*** is ***Luna Service Release 2 (4.4.2)*** .
 
 (Current release only supports Windows OS)
 
@@ -39,7 +40,7 @@ We summarize more than 60 heuristics on the typical descriptions of API usage co
 * The corresponding experiment results are all under the folder of ***Replication***
 * The experiment results from 1 to 2 are all recorded in the files named of ***experiment1.xls***, ***experiment2_part1.xls*** and ***experiment2_part2.xls*** respectively. Note that experiment 2 has two parts.
 * With respect to  the file ***experiment1.xls***, column 1 records the corresponding links to the version where the the defects exist, column 5 and 6 record the corresponding FOLs generated from directives and source codes, respectively. Column 7 records the analysis results of our tool "DRONE" and column 8 records the manual classification.
-* The layout of the file ***experiment2_part1.xls*** and ***experiment2_part2.xls*** is the same as that of the files ***experiment1.xls***.
+* The layout of the file ***experiment2_part1.xls*** and ***experiment2_part2.xls*** is the same as that of the file ***experiment1.xls***.
 * The files under the folder ***experiment3*** record the recommendations of the corresponding detected defects of experiment1 and experiment2.
 * The files under the folder ***AssociatedMethodBody*** record the 3915 detected defects(1689+1605+621), which are recorded in the file ***inconsistent***, and the associated method bodies of the 3915 defects, which are recorded in the files named of ***APISource_experiment1***, ***APISource_experiment2*** and ***APISource_experiment3***.
 * The files under the folder ***StatisticalOfVerbsAndSubjects*** contain the statistics of the POS process over the 34874 tags: how many with subject? with verbs? what are the most commons verbs?
