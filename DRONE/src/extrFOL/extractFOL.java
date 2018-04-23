@@ -19,6 +19,7 @@ import GlobalVariables.CallGraphGlobalSettings;
 public class extractFOL {
 	private List<FolInfo> folInfo = new ArrayList();
 	public List<FolInfo> alterBugsInfo;
+	public List<FolInfo> alterBugsInfoNotFilted;
 	public List<String>  AllInfo=new ArrayList<String>();
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -82,7 +83,8 @@ public class extractFOL {
             	e.printStackTrace();
             	}
 		toNLP tn = new toNLP(folInfo);
-		alterBugsInfo = tn.alterBugsInfo;
+		alterBugsInfoNotFilted = tn.alterBugsInfo;
+		alterBugsInfo=filterBugsInfo(alterBugsInfoNotFilted);
 		try {
 			createXLSFile();
 		} catch (RowsExceededException e) {
@@ -93,6 +95,18 @@ public class extractFOL {
 			e.printStackTrace();
 		}
 
+	}
+	public List<FolInfo> filterBugsInfo(List<FolInfo> bugsInfoNotFilted){
+		List<FolInfo> info=new ArrayList<FolInfo>();
+		info.addAll(bugsInfoNotFilted);
+		for(int i=0;i<info.size();i++){
+			FolInfo temp=info.get(i);
+			if(temp.getNLPs_doc().isEmpty()||temp.getNLPs_doc()==null){
+				info.remove(i);
+				i--;
+			}
+		}
+		return info;
 	}
 	
 	public void createXLSFile() throws RowsExceededException, WriteException{
@@ -136,7 +150,7 @@ public class extractFOL {
 					String check=elementsChanged[k-1];
 		//			System.out.println(check);
 					if(!check.equals("Consistent")){
-						FolInfo s=alterBugsInfo.get(index);
+						FolInfo s=alterBugsInfoNotFilted.get(index);
 				
 						index++;
 						str=s.getNLPs_doc();
