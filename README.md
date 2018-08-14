@@ -42,7 +42,7 @@ We summarize more than 60 heuristics on the typical descriptions of API usage co
 * With respect to  the file ***experiment1.xls***, column 1 records the corresponding links to the version where the the defects exist, column 5 and 6 record the corresponding FOLs generated from directives and source codes, respectively. Column 7 records the SMT-LIB2 formats from corresponding directives. Column 8 records the SMT-LIB2 formats from corresponding source codes. Column 9 records the analysis results of our tool "DRONE" and column 10 records the manual classification.
 * The layout of the files ***experiment2_part1.xls*** and ***experiment2_part2.xls*** is the same as that of the file ***experiment1.xls***.
 * The files under the folder ***experiment3*** record the recommendations of the corresponding detected defects of experiment1 and experiment2.
-* The files under the folder ***AssociatedMethodBody*** record the 3915 detected defects(1689+1605+621), which are recorded in the file ***inconsistent***, and the associated method bodies of the 3915 defects, which are recorded in the files named of ***APISource_experiment1***, ***APISource_experiment2*** and ***APISource_experiment3***.
+* The files under the folder ***AssociatedMethodBody*** record the 3915 detected defects(1689+1605+621), which are recorded in the file ***inconsistent***, and the associated method bodies of the 3915 defects, which are recorded in the files named of ***APISource_experiment1***, ***APISource_experiment2_part1*** and ***APISource_experiment2_part2***.
 * The files under the folder ***StatisticalOfVerbsAndSubjects*** contain the statistics of the POS process over the 34874 tags: how many with subject? with verbs? what are the most commons verbs?
 
 
