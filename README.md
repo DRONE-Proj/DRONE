@@ -1,7 +1,7 @@
 # DRONE
 
 # ***Description***
-***DRONE***(Detector and Repairer of documentation defects) is integrated into a framework, which can automatically detect and repair 
+***DRONE***(***D***etect and ***R***epair of d***O***cumentatio***N*** d***E***fects) is integrated into a framework, which can automatically detect and repair 
 defects of API documents by leveraging techniques from program analysis, natural language processing and constraint solving.
 
 Our approach includes several parts as follows:
