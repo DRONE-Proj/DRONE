@@ -24,6 +24,7 @@ We summarize more than 60 heuristics on the typical descriptions of API usage co
 * step 2. The two files ***libz3.dll*** and ***libz3java.dll*** need to be put under the specified folder:
 ***C:/Windows/System32/*** ;
 * step 3. Please make sure that ***vcredist_x64.exe*** has been installed (Our tool uses the SMT solver ***Z3***, so step 2 and 3 need to be executed.);
+* Make sure that the dependent Libraries of the two files ***libz3.dll*** and ***libz3java.dll*** exist( You can download ***Dependency Walker*** from the website: http://www.dependencywalker.com/ to check whether the dependent Libraries are complete).
 * Note that the version of the JDK we use in our current implementation is ***Java SE Development Kit 8u144*** and the verison of ***eclipse*** is ***Luna Service Release 2 (4.4.2)*** .
 
 (Current release only supports Windows OS)
